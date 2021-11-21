@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  padding: 60px 0;
+
+  background-color: $banner-color;
+}
+
+.footer__container {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @media screen and (min-width: 1170px) {
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,21 @@
+.social-menu {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.social-menu__border {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.social-menu__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+
+  color: $brand-color;
+}

@@ -1,0 +1,34 @@
+// Расширение стилей с @mixin
+// @include centerFlex(inline-flex);
+
+// @include sizeLOGO();
+@mixin sizeLOGO() {
+  font-family: 'raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+@mixin sizeLOGOmobile() {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+}
+
+// @include centerFLEX();
+@mixin centerFLEX() {
+  display: flex;
+  align-items: center;
+}
+
+// @include font500line114letter002();
+@mixin font500line114letter002() {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}

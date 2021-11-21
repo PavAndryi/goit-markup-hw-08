@@ -1,0 +1,53 @@
+.main-nav {
+  @media screen and (min-width: 768px) {
+    @include centerFLEX();
+    justify-content: center;
+  }
+}
+
+.site-nav__item:not(:last-child) {
+  margin-bottom: 32px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
+.site-nav {
+  @media screen and (min-width: 768px) {
+    @include centerFLEX();
+  }
+}
+
+.site-nav__item {
+  position: relative;
+}
+
+.site-nav .site-nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.site-nav__link {
+  display: block;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+
+  color: $secondary-bg-color;
+
+  transition: color $t250 $cubic;
+
+  @media screen and (min-width: 768px) {
+    @include font500line114letter002();
+  }
+
+  &:hover,
+  &:focus {
+    color: $brand-color;
+  }
+}
+
+.site-nav__link--active {
+  color: $brand-color;
+}

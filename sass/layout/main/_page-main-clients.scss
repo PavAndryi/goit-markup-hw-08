@@ -1,0 +1,38 @@
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -15px;
+}
+
+.clients__item {
+  cursor: pointer;
+  flex-basis: calc((100% - 4 * 15px) / 2);
+  margin: 15px;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 6 * 15px) / 3);
+  }
+
+  @media screen and (min-width: 1170px) {
+    flex-basis: calc((100% - 12 * 15px) / 6);
+  }
+}
+
+.clients__link {
+  display: flex;
+  height: 92px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $social-color;
+  box-sizing: border-box;
+  border-radius: 4px;
+  fill: $social-color;
+  transition: border-color $t250 $cubic, fill $t250 $cubic;
+}
+
+.clients__link:hover,
+.clients__link:focus {
+  border: 1px solid $brand-color;
+  fill: $brand-color;
+}

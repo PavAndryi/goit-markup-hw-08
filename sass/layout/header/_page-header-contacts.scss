@@ -1,0 +1,94 @@
+.contacts {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  margin-block-start: auto;
+  margin-bottom: 32px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
+.contacts {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    margin-left: 75px;
+  }
+  @media screen and (min-width: 1170px) {
+    display: flex;
+    margin-left: auto;
+    flex-direction: row;
+  }
+}
+
+.contacts .contacts__item:not(:last-child) {
+  margin-bottom: 10px;
+
+  @media screen and (min-width: 1170px) {
+    margin-right: 50px;
+    margin-bottom: 0px;
+  }
+}
+
+.contacts__link {
+  font-size: 24px;
+  line-height: 1.666;
+  letter-spacing: 0.02em;
+
+  color: $primary-text-color;
+
+  @media screen and (min-width: 768px) {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    color: $primary-text-color;
+    fill: $primary-text-color;
+
+    transition: color $t250 $cubic;
+  }
+  &:hover,
+  &:focus {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.176;
+    color: $brand-color;
+    fill: $brand-color;
+
+    @media screen and (min-width: 768px) {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.16;
+    }
+  }
+}
+
+.contacts__svg {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+    margin-right: 8px;
+  }
+  @media screen and (min-width: 1170px) {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
+.contacts__link:hover .contacts__svg,
+.contacts__link:focus .contacts__svg {
+  @media screen and (min-width: 768px) {
+    animation: contact-animation 2000ms infinite alternate ease-in-out $t250;
+  }
+}
+
+@keyframes contact-animation {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}

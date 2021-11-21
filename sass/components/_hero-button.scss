@@ -1,0 +1,23 @@
+.hero__button {
+  display: inline-block;
+  padding: 10px 32px;
+  box-shadow: 0px 4px 4px $hero-button-rgba;
+  border-radius: 8px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  outline: none;
+
+  background-color: $brand-color;
+  color: $white-color;
+
+  transition: background-color $t250 $cubic;
+
+  &:hover,
+  &:focus {
+    background-color: $brand-color;
+  }
+}

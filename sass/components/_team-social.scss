@@ -1,0 +1,32 @@
+.social__list {
+  display: flex;
+  justify-content: center;
+  padding-right: 32px;
+  padding-left: 32px;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social__link {
+  @include centerFLEX();
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  color: $primary-text-color;
+  fill: $social-color;
+}
+
+/*------Animation-------------------*/
+.social__link {
+  transition: background-color $t250 $cubic, fill $t250 $cubic;
+}
+
+.social__link:hover,
+.social__link:focus {
+  background-color: $brand-color;
+  fill: $white-color;
+}

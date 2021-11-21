@@ -1,0 +1,41 @@
+.works__no-mobile {
+  display: none;
+
+  @media screen and (min-width: 1170px) {
+    display: flex;
+  }
+}
+
+.works {
+  display: flex;
+  justify-content: space-between;
+}
+
+.works__title {
+  margin-bottom: 35 px;
+  color: #212121;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+}
+
+.works__item {
+  position: relative;
+}
+
+.works__label {
+  @include centerFLEX();
+  justify-content: center;
+
+  bottom: 0;
+  position: absolute;
+  width: 370px;
+  height: 70px;
+
+  background: $works-rgba;
+}
+
+.works__text {
+  color: $white-color;
+}

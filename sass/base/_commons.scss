@@ -1,0 +1,52 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: $primary-text-color;
+  background: $white-color;
+
+  font-family: 'roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  margin: 0 auto;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+/* img робим блочним */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  /* Забераєм декоративні лінії */
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Забераєм вид маркера та відступи*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.no-padding-top {
+  padding-top: 0;
+}

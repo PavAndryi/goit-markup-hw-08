@@ -1,0 +1,990 @@
+:root {
+  /* COLOR */
+  /* ЛОГОТИП */
+  --brand-color: #2196f3;
+  --brand-black-color: #000000;
+  /* ЗАГОЛОВКИ */
+  --secondary-bg-color: #212121;
+  /* ПРОСТИЙ ТЕКСТ */
+  --primary-text-color: #757575;
+  /* БАНЕР */
+  --banner-color: #2f303a;
+  /**/
+  --white-color: #ffffff;
+  /*PORTFOLIO BUTTON*/
+  --pot-button-color: #f5f4fa;
+
+  --social--color: #afb1b8;
+
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+  --t250: 250ms;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--primary-text-color);
+  background: var(--white-color);
+
+  font-family: 'roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  margin: 0 auto;
+}
+
+/* img робим блочним */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  /* Забераєм декоративні лінії */
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Забераєм вид маркера та відступи*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  padding: 94px 0;
+}
+/*----------------------------------------------------------*/
+/*--------------------------HEADER--------------------------*/
+/*----------------------------------------------------------*/
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #ececec;
+}
+
+.header_container {
+  display: flex;
+  align-items: center;
+}
+
+/* ЛОГОТИП */
+.main-nav__logo {
+  margin-right: 94px;
+  font-family: 'raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--brand-color);
+}
+
+.main-nav__logo--color {
+  color: var(--brand-black-color);
+}
+
+/* НАВІГАЦІЯ */
+.main-nav {
+  display: flex;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav .site-nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.site-nav__item {
+  position: relative;
+}
+
+.site-nav__link {
+  display: block;
+
+  color: var(--secondary-bg-color);
+
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  transition: color var(--t250) var(--cubic);
+}
+
+.site-nav__link.active::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 4px;
+  top: 44px;
+  left: 0;
+
+  border-radius: 2px;
+  background: var(--brand-color);
+}
+
+.site-nav__link:hover,
+.site-nav__link:focus {
+  color: var(--brand-color);
+}
+
+.active {
+  color: var(--brand-color);
+}
+
+/* КОНТАКТИ */
+.contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.contacts .contacts__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contacts__link {
+  display: flex;
+  align-items: center;
+  color: var(--primary-text-color);
+  fill: var(--primary-text-color);
+
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition: color var(--t250) var(--cubic);
+}
+
+.contacts__svg {
+  margin-right: 10px;
+}
+
+.contacts__link:hover .contacts__svg,
+.contacts__link:focus .contacts__svg {
+  animation: contact-animation 2000ms infinite alternate ease-in-out var(--t250);
+}
+
+@keyframes contact-animation {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+/*----- HOVER FOCUS ------*/
+
+.contacts__link:hover,
+.contacts__link:focus {
+  color: var(--brand-color);
+  fill: var(--brand-color);
+}
+
+/*--------------------------HEADER--------------------------*/
+/*---------------------------------------------------------*/
+/*--------------------------MAIN---------------------------*/
+/*-----HERO------*/
+.hero {
+  background-color: var(--banner-color);
+  color: var(--white-color);
+
+  align-items: center;
+  border: transparent;
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.hero--img {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero__title {
+  margin-bottom: 30px;
+
+  font-weight: 900;
+  line-height: 1.36;
+  font-size: 44px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero__button {
+  display: inline-block;
+  padding: 10px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  outline: none;
+
+  background-color: var(--brand-color);
+  color: var(--white-color);
+
+  transition: background-color var(--t250) var(--cubic);
+}
+
+.hero__button:hover,
+.hero__button:focus {
+  background-color: var(--brand-color);
+}
+
+/* ------------------------- */
+/* ---ОСОБЛИВОСТІ---*/
+.features {
+  background-color: var(--white-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.features__list {
+  display: flex;
+}
+
+.features__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.features__svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--pot-button-color);
+  border-radius: 4px;
+}
+
+.features__title {
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--secondary-bg-color);
+}
+
+.features__text {
+  color: var(--primary-text-color);
+}
+
+/* ------------------------------------------ */
+/*---ЧИМ МИ ЗАЙМАЄМСЯ---*/
+.works {
+  padding-top: 0;
+}
+
+.works__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.works__item {
+  position: relative;
+}
+
+.works__label {
+  display: flex;
+  bottom: 0;
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.works__text {
+  color: var(--white-color);
+}
+
+/*---НАША КОМАНДА---------------------------*/
+.team {
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  background: #f5f4fa;
+}
+
+.team__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.team__item {
+  margin-left: 30px;
+  margin-top: 30px;
+
+  background: var(--white-color);
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team__wrap {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.team__title {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  color: var(--secondary-bg-color);
+}
+
+.team__text {
+  margin-bottom: 16px;
+
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  color: var(--primary-text-color);
+}
+
+.social__list {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 32px;
+  padding-left: 32px;
+}
+
+.social__link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-icon-color);
+  fill: var(--social--color);
+}
+
+/*------Animation-------------------*/
+.social__link {
+  /*
+  transition-property: background-color;
+  transition-duration: var(--t250);
+  transition-timing-function: var(--cubic);
+  transition-delay: 200ms;
+  */
+  transition: background-color var(--t250) var(--cubic), fill var(--t250) var(--cubic);
+}
+
+.social__link:hover,
+.social__link:focus {
+  background-color: var(--brand-color);
+  fill: var(--white-color);
+}
+
+/* ---------Постоянные клиенты ------*/
+.clients {
+  background-color: var(--white-color);
+}
+
+.clients__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clients__item {
+  cursor: pointer;
+}
+
+.clients__link {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--social--color);
+  box-sizing: border-box;
+  border-radius: 4px;
+  fill: var(--social--color);
+  transition: border-color var(--t250) var(--cubic), fill var(--t250) var(--cubic);
+}
+
+.clients__link:hover,
+.clients__link:focus {
+  border: 1px solid var(--brand-color);
+  fill: var(--brand-color);
+}
+/* ----------------------FOOTER-------------------*/
+.footer {
+  display: flex;
+  padding: 60px 0;
+
+  background-color: var(--banner-color);
+}
+
+.footer__container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer__logo {
+  margin-bottom: 20px;
+
+  color: var(--brand-color);
+
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1, 19;
+  letter-spacing: 0.03em;
+  cursor: default;
+}
+
+.footer__logo--color {
+  color: var(--white-color);
+}
+
+.left-box {
+  display: inline-block;
+}
+
+.footer__text {
+  color: rgba(255, 255, 255, 0.6);
+
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  font-style: normal;
+  cursor: pointer;
+  transition: color var(--t250) var(--cubic);
+}
+
+.footer__item {
+  margin-bottom: 9px;
+}
+
+.footer__item:nth-child(3n) {
+  margin-bottom: 0;
+}
+
+.footer__text:hover,
+.footer__text:focus {
+  color: var(--white-color);
+}
+
+/* ------------------ */
+/*---Приєднуйтеся -----*/
+.center-box {
+  margin-left: 85px;
+}
+
+.center-box__text {
+  margin-bottom: 20px;
+  color: var(--white-color);
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.join-social__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.join-social__link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  fill: var(--white-color);
+  background: rgba(255, 255, 255, 0.1);
+
+  transition: background-color var(--t250) var(--cubic);
+}
+
+.join-social__item {
+  margin-right: 10px;
+}
+
+.join-social__item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.join-social__link:hover,
+.join-social__link:focus {
+  background-color: var(--brand-color);
+}
+
+/* ----------------------- */
+/*-------- Подпишитесь на росилку ------------*/
+.right-box {
+  margin-left: 93px;
+}
+
+.form-subscribe {
+  display: flex;
+  align-items: flex-end;
+}
+
+.form-subscribe__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-subscribe__field input {
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.form-subscribe__input {
+  width: 358px;
+  height: 50px;
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  outline: none;
+}
+
+.form-subscribe__label input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-subscribe__input:focus {
+  border: 1px solid var(--brand-color);
+}
+
+.form-subscribe__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  margin-left: 12px;
+
+  font-size: 16px;
+  line-height: 1.87;
+
+  border: transparent;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--white-color);
+}
+
+.form-subscribe__svg {
+  margin-left: 10px;
+  fill: var(--white-color);
+}
+/*-------------------------------------------------*/
+/* -------------------PORTFOLIO--------------------*/
+/*-------------------------------------------------*/
+/*----- MAIТN-------------------------------------*/
+.filters {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
+.filters__item:not(:last-child) {
+  margin-right: 8px;
+}
+.filters__button {
+  display: inline-block;
+  padding: 6px 22px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  background-color: var(--pot-button-color);
+
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+
+  transition: background-color var(--t250) var(--cubic), color var(--t250) var(--cubic);
+}
+
+.filters__button:hover,
+.filters__button:focus {
+  background-color: var(--brand-color);
+  color: var(--white-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.portfolio__item {
+  margin-left: 30px;
+  margin-top: 30px;
+  outline: 1px solid #eeeeee;
+}
+
+.portfolio__link {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio__foto {
+  position: relative;
+  overflow: hidden;
+}
+
+.thumb {
+  display: inline-block;
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform var(--t250) var(--cubic);
+}
+
+.thumb__text {
+  padding: 63px 24px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+
+  color: var(--white-color);
+
+  opacity: 0;
+  transition: opacity var(--t250) var(--cubic), box-shadow var(--t250) var(--cubic);
+}
+
+.thumb:hover,
+.thumb:focus {
+  opacity: 1;
+}
+
+.portfolio__link:hover .thumb,
+.portfolio__link:focus .thumb {
+  transform: translateY(0);
+}
+
+.portfolio__link:hover .thumb__text,
+.portfolio__link:focus .thumb__text {
+  opacity: 1;
+}
+
+.portfolio__link:hover,
+.portfolio__link:focus {
+  outline: 1px solid #eeeeee;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-box {
+  padding: 20px 24px;
+}
+.portfolio-box__title {
+  margin-bottom: 4px;
+
+  color: var(--secondary-bg-color);
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.portfolio-box__text {
+  color: var(--primary-text-color);
+
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+}
+
+/* ---------------------- */
+/* ---Animation Modal----- */
+.backdrop {
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity var(--t250) var(--cubic), visibility var(--t250) var(--cubic);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 581px;
+  min-width: 528px;
+  background-color: var(--white-color);
+  border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--t250) var(--cubic);
+}
+
+.modal__botton {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 14px;
+  right: 14px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  background-color: transparent;
+  transition: transform var(--t250) var(--cubic), background-color var(--t250) var(--cubic);
+}
+
+.modal__botton:hover,
+.modal__botton:focus {
+  transform: scale(1.25);
+  border: 1px solid var(--brand-color);
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+.form__title {
+  margin-bottom: 12px;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+
+  color: var(--banner-color);
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form__label {
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+}
+
+.form__input {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+}
+
+.form__svg {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 2%;
+  transition: fill var(--t250) var(--cubic);
+}
+
+.form__comment {
+  width: 448px;
+  height: 120px;
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  transition: border var(--t250) var(--cubic);
+}
+
+.form__field {
+  position: relative;
+}
+
+.form__input {
+  padding: 12px 11px 11px 28px;
+  transition: border var(--t250) var(--cubic);
+}
+
+.form__input:focus {
+  border: 1px solid var(--brand-color);
+}
+
+.form__input:focus + .form__svg {
+  fill: var(--brand-color);
+}
+
+.form__comment::placeholder {
+  font-size: 12px;
+  line-height: 1.61;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form__comment:focus {
+  border: 1px solid var(--brand-color);
+}
+
+.form-checkbox {
+  margin-bottom: 30px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+}
+
+.form-checkbox__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-checkbox__policy {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  position: absolute;
+}
+
+.form-checkbox__icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+
+  cursor: pointer;
+  border: 1px solid var(--secondary-bg-color);
+  border-radius: 4px;
+}
+
+.form-checkbox__policy:checked + .form-checkbox__icon {
+  border-color: transparent;
+  background-color: var(--brand-color);
+  background-image: url(../img/icon-check.svg);
+  background-size: contain;
+  background-origin: padding-box;
+}
+
+.form-checkbox__link {
+  margin-left: 3px;
+  color: var(--brand-color);
+  text-decoration: underline;
+}
+
+.form__button {
+  width: 200px;
+  height: 50px;
+  border: transparent;
+  background-color: var(--brand-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--white-color);
+  cursor: pointer;
+  transition: background var(--t250) var(--cubic);
+  transition: box-shadow var(--t250) var(--cubic);
+}
+
+.form__button:hover {
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
