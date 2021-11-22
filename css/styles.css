@@ -690,7 +690,7 @@ p {
   flex-direction: column;
 }
 
-.portfolio__foto {
+.portfolio__photo {
   position: relative;
   overflow: hidden;
 }

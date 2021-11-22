@@ -31,6 +31,7 @@
   background-color: $white-color;
   transform: translate(-50%, 0) scale(1);
   transition: transform $t250 $cubic;
+
   // @media screen and (max-width: 767px) {
   //   width: calc(100% - 2 * 15px);
   // }
@@ -39,15 +40,15 @@
   //   top: 50%;
   //   transform: translate(-50%, -50%);
   // }
-  // @media screen and (min-width: $desktop) {
-  //   top: 50%;
-  //   left: 50%;
+  @media screen and (min-width: 1200px) {
+    top: 50%;
+    left: 50%;
+    min-width: 528px;
+    min-height: 581px;
 
-  //   min-width: 528px;
-  //   min-height: 581px;
+    transform: translate(-50%, -50%) scale(1);
+  }
 
-  //   transform: translate(-50%, -50%) scale(1);
-  // }
   @media (max-height: 600px) {
     top: 15%;
     left: 50%;
@@ -127,6 +128,12 @@
   box-sizing: border-box;
   border-radius: 4px;
   outline: none;
+  padding: 12px 11px 11px 28px;
+  transition: border $t250 $cubic;
+
+  @media screen and (min-width: 1200px) {
+    width: 450px;
+  }
 }
 
 .form__svg {
@@ -151,15 +158,14 @@
   border-radius: 4px;
   outline: none;
   transition: border $t250 $cubic;
+
+  @media screen and (min-width: 1200px) {
+    width: 450px;
+  }
 }
 
 .form__field {
   position: relative;
-}
-
-.form__input {
-  padding: 12px 11px 11px 28px;
-  transition: border $t250 $cubic;
 }
 
 .form__input:focus {
