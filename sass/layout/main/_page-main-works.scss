@@ -1,7 +1,7 @@
 .works__no-mobile {
   display: none;
 
-  @media screen and (min-width: 1170px) {
+  @media screen and (min-width: 1200px) {
     display: flex;
   }
 }

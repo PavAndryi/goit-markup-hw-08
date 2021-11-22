@@ -7,7 +7,7 @@
     @media screen and (min-width: 768px) {
       background-image: linear-gradient($rgba-hero), url(../images/tablet/hero/header.jpg);
     }
-    @media screen and (min-width: 1170px) {
+    @media screen and (min-width: 1200px) {
       background-image: linear-gradient($rgba-hero), url(../images/desktop/hero/header.jpg);
     }
   }
@@ -58,7 +58,7 @@
     }
   }
 
-  @media screen and (min-width: 1170px) {
+  @media screen and (min-width: 1200px) {
     & {
       max-width: 1600px;
       height: 600px;
@@ -86,7 +86,7 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
-  @media screen and (min-width: 1170px) {
+  @media screen and (min-width: 1200px) {
     line-height: 1.36;
     font-size: 44px;
   }

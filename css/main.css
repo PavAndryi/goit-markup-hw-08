@@ -284,7 +284,7 @@ summary {
   padding: 60px 0;
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .section {
     padding: 94px 0;
   }
@@ -374,7 +374,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .container {
     width: 1170px;
   }
@@ -396,7 +396,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .logo {
     font-family: 'raleway', sans-serif;
     font-weight: 700;
@@ -423,7 +423,7 @@ p {
   cursor: default;
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .footer-logo {
     font-family: 'raleway', sans-serif;
     font-weight: 700;
@@ -892,7 +892,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .header__container {
     align-items: center;
   }
@@ -992,7 +992,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .contacts {
     display: flex;
     margin-left: auto;
@@ -1004,7 +1004,7 @@ p {
   margin-bottom: 10px;
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .contacts .contacts__item:not(:last-child) {
     margin-right: 50px;
     margin-bottom: 0px;
@@ -1057,7 +1057,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .contacts__svg {
     display: inline-block;
     margin-right: 10px;
@@ -1092,7 +1092,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop/hero/header.jpg);
   }
@@ -1135,7 +1135,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .hero {
     max-width: 1600px;
     height: 600px;
@@ -1144,7 +1144,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1170px) and (min-device-pixel-ratio: 2), screen and (min-width: 1170px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1170px) and (min-resolution: 192dpi), screen and (min-width: 1170px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/hero/header@2x.jpg");
   }
@@ -1159,7 +1159,7 @@ p {
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .hero__title {
     line-height: 1.36;
     font-size: 44px;
@@ -1178,31 +1178,26 @@ p {
   }
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .features {
     flex-wrap: inherit;
     margin: 0;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 678px) and (max-width: 1199px) {
   .features__item {
     width: calc((100% - 4 * 15px) / 2);
     margin: 15px;
   }
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .features__item {
     width: 100%;
     margin-top: 0;
     margin-left: 0;
-    margin-right: 30px;
   }
-}
-
-.features__item:not(:last-child) {
-  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1211,8 +1206,8 @@ p {
   }
 }
 
-@media screen and (min-width: 1170px) {
-  .features__item:not(:last-child) .features__item:not(:last-child) {
+@media screen and (min-width: 1200px) {
+  .features__item:not(:last-child) {
     margin-right: 30px;
   }
 }
@@ -1251,7 +1246,7 @@ p {
   display: none;
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .works__no-mobile {
     display: flex;
   }
@@ -1312,6 +1307,7 @@ p {
 
 .team__item {
   background: #ffffff;
+  margin-bottom: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
@@ -1323,7 +1319,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .team__item {
     width: calc((100% - 8 * 15px) / 4);
     margin: 15px;
@@ -1371,7 +1367,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .clients__item {
     flex-basis: calc((100% - 12 * 15px) / 6);
   }
@@ -1414,7 +1410,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .portfolio__item {
     width: calc((100% - 6 * 15px) / 3);
     margin: 15px;
@@ -1512,7 +1508,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .footer__container {
     align-items: baseline;
     justify-content: space-between;
@@ -1525,7 +1521,7 @@ p {
   align-items: center;
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .footer-left_box {
     align-items: flex-start;
   }
@@ -1537,7 +1533,7 @@ p {
   align-items: center;
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .footer__list {
     align-items: flex-start;
   }
@@ -1635,7 +1631,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .footer-right_box {
     margin-top: 0px;
   }
@@ -1647,7 +1643,7 @@ p {
   align-items: center;
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .form-subscribe {
     flex-direction: row;
   }
@@ -1659,7 +1655,7 @@ p {
   align-items: center;
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .form-subscribe__field {
     align-items: flex-start;
   }
@@ -1717,7 +1713,7 @@ p {
   color: #ffffff;
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1200px) {
   .form-subscribe__button {
     margin-top: 15px;
   }
