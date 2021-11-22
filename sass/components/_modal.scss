@@ -32,14 +32,10 @@
   transform: translate(-50%, 0) scale(1);
   transition: transform $t250 $cubic;
 
-  // @media screen and (max-width: 767px) {
-  //   width: calc(100% - 2 * 15px);
-  // }
-  // @media screen and (min-width: $tablet) and (max-width: 1199px) {
-  //   width: calc(100% - 2 * 159px);
-  //   top: 50%;
-  //   transform: translate(-50%, -50%);
-  // }
+  @media screen and (max-width: 479px) {
+    max-width: 400px;
+  }
+
   @media screen and (min-width: 1200px) {
     top: 50%;
     left: 50%;
