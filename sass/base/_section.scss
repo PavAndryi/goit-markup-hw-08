@@ -1,7 +1,7 @@
 .section {
   padding: 60px 0;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $min-desktop) {
     padding: 94px 0;
   }
 }
@@ -15,8 +15,12 @@
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
+
+  @media screen and (min-width: $min-desktop) {
+    margin-bottom: 50px;
+  }
 }
 
 .section__background {
-  background: #f5f4fa;
+  background: $pot-button-color;
 }

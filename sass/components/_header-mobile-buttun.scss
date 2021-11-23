@@ -1,14 +1,14 @@
 .menu-button {
   z-index: 850;
   display: inline-flex;
-  position: fixed;
+  position: absolute;
   right: 4%;
   border: 0;
   border-radius: 20%;
   background-color: transparent;
   fill: var(--secondary-text-color);
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $min-tablet) {
     display: none;
   }
 }
@@ -27,7 +27,6 @@
 
 .menu-container.is-open {
   z-index: 800;
-  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -46,7 +45,7 @@
   background-color: $white-color;
   border-radius: 4 px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $min-tablet) {
     display: flex;
     position: unset;
     padding: 0;

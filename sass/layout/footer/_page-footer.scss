@@ -6,13 +6,13 @@
 }
 
 .footer__container {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $min-tablet) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $min-desktop) {
     align-items: baseline;
     justify-content: space-between;
   }

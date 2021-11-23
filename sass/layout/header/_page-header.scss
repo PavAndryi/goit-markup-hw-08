@@ -1,17 +1,21 @@
 .header {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   border-bottom: 1px solid $header-border-color;
+
+  @media screen and (min-width: $min-desktop) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
 }
 
 .header__container {
   @include centerFLEX();
-  position: relative;
   justify-content: space-between;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $min-tablet) {
     align-content: center;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $min-desktop) {
     align-items: center;
   }
 }

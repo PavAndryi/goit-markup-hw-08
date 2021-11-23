@@ -1,13 +1,18 @@
 .filters {
   display: flex;
-  margin-bottom: 50px;
   flex-wrap: wrap;
+  @media screen and (max-width: $max-mobile) {
+    margin-bottom: 40px;
+  }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $min-tablet) and (max-width: $max-tablet) {
+    margin-bottom: 30px;
     justify-content: center;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $min-desktop) {
+    margin-bottom: 50px;
+    justify-content: center;
   }
 }
 
@@ -16,7 +21,7 @@
 }
 
 .filters__item:nth-child(-n + 3) {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $max-mobile) {
     margin-bottom: 15px;
   }
 }

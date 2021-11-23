@@ -1,14 +1,13 @@
 .works__no-mobile {
   display: none;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $min-desktop) {
     display: flex;
   }
 }
 
 .works {
   display: flex;
-  justify-content: space-between;
 }
 
 .works__title {
@@ -22,6 +21,10 @@
 
 .works__item {
   position: relative;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .works__label {

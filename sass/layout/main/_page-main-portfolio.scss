@@ -1,28 +1,35 @@
 .portfolio {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -15px;
+  @media screen and (min-width: $min-tablet) and (max-width: $max-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  @media screen and (min-width: $min-desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .portfolio__item {
-  width: calc((100% - 2 * 15px) / 1);
-  margin: 15px;
   outline: 1px solid $portfolio-color;
 
-  @media screen and (min-width: 768px) {
+  &:not(:last-child) {
+    @media screen and (max-width: $max-mobile) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: $min-tablet) and (max-width: $max-tablet) {
     width: calc((100% - 4 * 15px) / 2);
     margin: 15px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $min-desktop) {
     width: calc((100% - 6 * 15px) / 3);
     margin: 15px;
   }
-}
-
-.portfolio__link {
-  display: flex;
-  flex-direction: column;
 
   &:hover,
   &:focus {
@@ -31,6 +38,11 @@
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
+}
+
+.portfolio__link {
+  display: flex;
+  flex-direction: column;
 }
 
 .portfolio__photo {
@@ -87,6 +99,7 @@
 .portfolio-box {
   padding: 20px 24px;
 }
+
 .portfolio-box__title {
   margin-bottom: 4px;
 

@@ -1,5 +1,5 @@
 .main-nav {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $min-tablet) {
     @include centerFLEX();
     justify-content: center;
   }
@@ -8,13 +8,13 @@
 .site-nav__item:not(:last-child) {
   margin-bottom: 32px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $min-tablet) {
     margin-bottom: 0;
   }
 }
 
 .site-nav {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $min-tablet) {
     @include centerFLEX();
   }
 }
@@ -38,7 +38,7 @@
 
   transition: color $t250 $cubic;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $min-tablet) {
     @include font500line114letter002();
   }
 
@@ -48,12 +48,23 @@
   }
 
   &.site-nav__link--active::after {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $min-tablet) and (max-width: $max-tablet) {
       position: absolute;
       content: '';
       width: 100%;
       height: 4px;
-      top: 44px;
+      top: 40px;
+      left: 0;
+
+      border-radius: 2px;
+      background: $brand-color;
+    }
+    @media screen and (min-width: $min-desktop) {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 4px;
+      top: 46px;
       left: 0;
 
       border-radius: 2px;

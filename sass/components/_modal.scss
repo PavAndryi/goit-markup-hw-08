@@ -32,11 +32,11 @@
   transform: translate(-50%, 0) scale(1);
   transition: transform $t250 $cubic;
 
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: $pre-mobile) {
     max-width: 400px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $min-desktop) {
     top: 50%;
     left: 50%;
     min-width: 528px;
@@ -127,7 +127,7 @@
   padding: 12px 11px 11px 28px;
   transition: border $t250 $cubic;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $min-desktop) {
     width: 450px;
   }
 }
@@ -155,7 +155,7 @@
   outline: none;
   transition: border $t250 $cubic;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $min-desktop) {
     width: 450px;
   }
 }

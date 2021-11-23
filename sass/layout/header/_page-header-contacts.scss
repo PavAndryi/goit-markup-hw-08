@@ -1,76 +1,98 @@
 .contacts {
-  display: flex;
-  flex-wrap: wrap-reverse;
   margin-block-start: auto;
-  margin-bottom: 32px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: $max-mobile) {
+    margin-bottom: 64px;
+  }
+
+  @media screen and (min-width: $min-tablet) and (max-width: $max-tablet) {
     margin-bottom: 0;
   }
 }
 
 .contacts {
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: $max-tablet) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  @media screen and (min-width: $min-tablet) and (max-width: $max-tablet) {
     display: flex;
     flex-direction: column;
     margin-left: 75px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $min-desktop) {
     display: flex;
     margin-left: auto;
-    flex-direction: row;
+  }
+}
+
+.contacts__item:not(:last-child) {
+  @media screen and (min-width: $min-tablet) and (max-width: $max-tablet) {
+    margin-bottom: 10px;
   }
 }
 
 .contacts .contacts__item:not(:last-child) {
-  margin-bottom: 10px;
+  @media screen and (max-width: $max-mobile) {
+    margin-bottom: 32px;
+  }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $min-desktop) {
     margin-right: 50px;
     margin-bottom: 0px;
   }
 }
 
 .contacts__link {
+  font-weight: 500;
   font-size: 24px;
   line-height: 1.666;
   letter-spacing: 0.02em;
 
   color: $primary-text-color;
 
-  @media screen and (min-width: 768px) {
-    font-weight: 500;
+  @media screen and (min-width: $min-tablet) and (max-width: $max-tablet) {
+    display: flex;
+    align-items: center;
+
     font-size: 12px;
     line-height: 1.16;
-    letter-spacing: 0.02em;
-    color: $primary-text-color;
+
     fill: $primary-text-color;
 
     transition: color $t250 $cubic;
   }
+
+  @media screen and (min-width: $min-desktop) {
+    display: flex;
+    align-items: center;
+
+    font-size: 14px;
+    line-height: 1.143;
+
+    fill: $primary-text-color;
+  }
   &:hover,
   &:focus {
-    font-weight: 500;
-    font-size: 34px;
-    line-height: 1.176;
     color: $brand-color;
     fill: $brand-color;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (max-width: $max-mobile) {
       font-weight: 500;
-      font-size: 12px;
-      line-height: 1.16;
+      font-size: 34px;
+      line-height: 1.176;
     }
   }
 }
 
 .contacts__svg {
   display: none;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $min-tablet) {
     display: inline-block;
     margin-right: 8px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $min-desktop) {
     display: inline-block;
     margin-right: 10px;
   }
@@ -78,7 +100,7 @@
 
 .contacts__link:hover .contacts__svg,
 .contacts__link:focus .contacts__svg {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $min-tablet) {
     animation: contact-animation 2000ms infinite alternate ease-in-out $t250;
   }
 }
