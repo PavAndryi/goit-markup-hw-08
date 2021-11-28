@@ -2,10 +2,6 @@
   margin: 60px 0;
   text-align: center;
 
-  @media screen and (max-width: $max-tablet) {
-    padding-top: 10px;
-  }
-
   @media screen and (min-width: $min-tablet) {
     margin: 0;
     margin-left: 0;

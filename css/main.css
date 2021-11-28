@@ -524,8 +524,6 @@ p {
 .social__list {
   display: flex;
   justify-content: center;
-  padding-right: 32px;
-  padding-left: 32px;
 }
 
 .social__item:not(:last-child) {
@@ -1624,12 +1622,6 @@ p {
 .footer-center_box {
   margin: 60px 0;
   text-align: center;
-}
-
-@media screen and (max-width: 1199px) {
-  .footer-center_box {
-    padding-top: 10px;
-  }
 }
 
 @media screen and (min-width: 768px) {
