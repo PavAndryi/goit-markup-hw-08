@@ -7,6 +7,7 @@
 
 .footer__container {
   @media screen and (min-width: $min-tablet) {
+    align-items: baseline;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
